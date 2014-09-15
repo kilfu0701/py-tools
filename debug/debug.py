@@ -9,19 +9,17 @@ class Debug(object):
             'error': 1,
         }
 
-    def log(self, msg='log'):
-        self._pr(sys._getframe().f_code.co_name, msg)
+    def log(self, msg='', *args, **kwargs):
+        self._pr(sys._getframe().f_code.co_name, msg, *args)
 
-    def debug(self, msg='debug'):
-        self._pr(sys._getframe().f_code.co_name, msg)
+    def debug(self, msg='', *args, **kwargs):
+        self._pr(sys._getframe().f_code.co_name, msg, *args)
 
-    def error(self, msg='error'):
-        self._pr(sys._getframe().f_code.co_name, msg)
+    def error(self, msg='', *args, **kwargs):
+        self._pr(sys._getframe().f_code.co_name, msg, *args)
 
-    def _pr(self, func, msg):
+    def _pr(self, func, msg, *args):
         if self.level >= self._pv[func]:
-            print '[{0}] {1}'.format(func.upper(), repr(msg))
-
-
+            print '[{0}] {1} {2}'.format(func.upper(), repr(msg), ' '.join(map(repr, args)))
 
 
