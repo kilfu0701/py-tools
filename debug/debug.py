@@ -65,7 +65,7 @@ class Debug(object):
             else:
                 func_txt = func.upper()
 
-            print '[{0}] {1} {2}'.format(func_txt, repr(msg), ' '.join(map(repr, args)))
+            print "[{0}]\t{1} {2}".format(func_txt, repr(msg), ' '.join(map(repr, args)))
 
 
 class ByColors:
