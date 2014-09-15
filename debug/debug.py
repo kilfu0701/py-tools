@@ -19,6 +19,9 @@ import sys
         log(..)
         debug(..)
         error(..)
+
+    @author:
+        kilfu0701 (kilfu0701@gmail.com)
 """
 class Debug(object):
     def __init__(self, level=4, color=False):
