@@ -15,8 +15,8 @@ import datetime
 from lxml import etree
 from bson import json_util
 
-from my_util.compress import ungzip
-from my_util.secure import gen_md5
+from py_util.compress import ungzip
+from py_util.secure import gen_md5
 
 retr_text = lambda nodes, pipe='': pipe.join([''.join(i.itertext()) for i in nodes])
 retr_one = lambda nodes: nodes.text if len(nodes)==0 else nodes[0].text
