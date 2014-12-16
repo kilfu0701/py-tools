@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "type": "update",
+    "description": "Update one field into new field.",
+    "ip": "127.0.0.1",
+    "port": "27017",
+    "username": "",
+    "password": "",
+    "source": {
+        "ip": "127.0.0.1",
+        "port": "27017",
+        "username": "",
+        "password": "",
+        "db": "",
+        "collection": ""
+    },
+    "destination": {
+        "ip": "127.0.0.1",
+        "port": "",
+        "username": "",
+        "password": ""
+        "db": "",
+        "collection": ""
+    }
+}
