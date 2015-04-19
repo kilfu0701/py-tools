@@ -24,9 +24,11 @@ import sys
         kilfu0701 (kilfu0701@gmail.com)
 """
 class Debug(object):
-    def __init__(self, level=4, color=False):
+    def __init__(self, level=4, color=False, types='unicode'):
         self.color = color
         self.level = level
+        self.types = types
+
         self._pv = {
             'info': {
                 'level': 4,
@@ -65,7 +67,10 @@ class Debug(object):
             else:
                 func_txt = func.upper()
 
-            print "[{0}]\t{1} {2}".format(func_txt, repr(msg), ' '.join(map(repr, args)))
+            if self.types == 'repr':
+                print "[{0}]\t{1} {2}".format(func_txt, repr(msg), ' '.join(map(repr, args)))
+            else:
+                print u"[{0}]\t{1} {2}".format(func_txt, unicode(msg), ' '.join(map(unicode, args)))
 
 
 class ByColors:
